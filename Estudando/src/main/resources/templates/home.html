@@ -1,60 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cadastro</title>
-<link rel="stylesheet" href="/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-	<header>
-		<h1>Lista de Alunos</h1>
-	</header>
-	
-	<form>
-		<label for="nome">Nome: </label> <input id="nome" name="nome">
-		<br>
+    <header>
+        <h1>Lista de Alunos</h1>
+    </header>
+    
+    <form method="post">
+        <label for="nome">Nome: </label> 
+        <input id="nome" name="nome" type="text">
+        <br>
 
-		<label for="matricula: ">Matrícula: </label> <input id="matricula: " name="matricula: ">
-		<br>
+        <label for="matricula">Matrícula: </label> 
+        <input id="matricula" name="matricula" type="text">
+        <br>
 
-		<label for="telefone">Telefone: </label> <input id="telefone" name="telefone">
-		<br>
+        <label for="telefone">Telefone: </label> 
+        <input id="telefone" name="telefone" type=text>
+        <br>
 
-		<label for="email">E-mail: </label> <input id="email" name="email">
-		<br>
-		
-		<label for="dataCadastro">Data de Cadastro: </label> <input id="dataCadastro" name="dataCadastro">
-		<br>
-		
-		<input type="submit" value="Cadastrar">
-	</form>
-		<br>
+        <label for="email">E-mail: </label> 
+        <input id="email" name="email" type="email">
+        <br>
+        
+        <label for="dataCadastro">Data de Cadastro: </label> 
+        <input id="dataCadastro" name="dataCadastro" type="date">
+        <br>
+        
+        <input type="submit" value="Cadastrar">
+    </form>
+    <br>
 
-	<section>
-		<table border="1">
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Nome</th>
-					<th>Idade</th>
-					<th>Matrícula</th>
-				</tr>
-			</thead>
-			<tbody>
-				<!-- Abaixo está um exemplo de como o Thymeleaf processa cada aluno em uma lista chamada 'alunos' -->
-				<tr th:each="aluno : ${alunos}">
-					<td th:text="${aluno.id}"></td>
-					<td th:text="${aluno.nome}"></td>
-					<td th:text="${aluno.idade}"></td>
-					<td th:text="${aluno.matricula}"></td>
-				</tr>
-			</tbody>
-		</table>
-	</section>
-
-	<footer>
-		<p>&copy; 2024 Minha Escola</p>
-	</footer>
 </body>
 </html>
